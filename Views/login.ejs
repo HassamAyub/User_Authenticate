@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family:"montserret", sans-serif;
+            background-color: rgb(53, 53, 53);
+            color: aliceblue;
+        }
+    </style>
+    <title>login page</title>
+</head>
+<body>
+    <h1>Login page</h1>
+    <div>
+        <form action="/user/login" method="post">
+            <lable>Email</lable>
+            <input type="email" name="email" placeholder="Enter your email">
+            <lable>Password</lable>
+            <input type="text" name="password" placeholder="Enter your password">
+            <input type="submit" value="log in"></form>
+    </div>
+    <br><br>
+    
+    <% if (locals.error) { %>
+        Sorry, <%= error %>
+    <% } %>
+</body>
+</html>
